@@ -7,6 +7,31 @@
 - 💬 I enjoy solving problems with clean code and scalable designs  
 
 ---
+
+## 📊 GitHub Stats:
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=yashpatil02121&show_icons=true&theme=tokyonight&count_private=true" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=yashpatil02121&theme=tokyonight" alt="GitHub Streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yashpatil02121&layout=compact&theme=tokyonight" alt="Most Used Languages" />
+</p>
+
+---
+
+## 🏆 GitHub Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=yashpatil02121&theme=tokyonight&no-frame=true&column=7" alt="GitHub Trophies" />
+</p>
+
+
+---
 ## 💻 Tech Stack
 
 ### 🔹 Languages & Paradigms
