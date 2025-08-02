@@ -18,6 +18,28 @@
   *(Check my profiles: [LeetCode](https://leetcode.com/u/yashpatil2121/) • [HackerRank](https://www.hackerrank.com/profile/patilyash02121/))*
 
 ---
+## 💻 Tech Stack
+
+### 🔹 Languages & Paradigms
+- Python, TypeScript
+
+### 🔹 Frontend
+- HTML, CSS, JavaScript, React.js, Nuxt.js
+
+### 🔹 Backend & Data
+- Django, REST APIs, SQL  
+- Python for Algorithms & DSA
+
+### 🔹 Tools & Platforms
+- Git, GitHub, VS Code, Cursor, Android Studio
+
+### 🔹 Competitive Programming
+- Active on:
+  - [LeetCode](https://leetcode.com/u/yashpatil2121/)
+  - [HackerRank](https://www.hackerrank.com/profile/patilyash02121/)
+
+
+---
 
 ## 📂 Featured Repositories
 
