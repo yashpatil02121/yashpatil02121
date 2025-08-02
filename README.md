@@ -2,7 +2,7 @@
 ## I’m **YASH SANJAY PATIL**  
 *Software Developer at Kulp Labs Pvt Ltd*
 
-- 🔭 I’m currently working on real-world full‑stack and data‑science solutions  
+- 🔭 I’m currently working on real-world full‑stack solutions  
 - 🌱 I’m exploring new tools, algorithms, and system integrations  
 - 💬 I enjoy solving problems with clean code and scalable designs  
 
