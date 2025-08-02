@@ -7,17 +7,6 @@
 - 💬 I enjoy solving problems with clean code and scalable designs  
 
 ---
-
-## 🔧 Tech Stack & Interests
-
-- **Languages & Paradigms:** Python, JavaScript, C, C++
-- **Frontend:** HTML, CSS, JavaScript, React.js (if applicable)
-- **Backend & Data:** Django/Flask, REST APIs, SQL, C-programming for algorithms & DSA
-- **Tools & Platforms:** Git, GitHub, VS Code / IntelliJ, Linux
-- **Competitive Programming:** Active on LeetCode & HackerRank  
-  *(Check my profiles: [LeetCode](https://leetcode.com/u/yashpatil2121/) • [HackerRank](https://www.hackerrank.com/profile/patilyash02121/))*
-
----
 ## 💻 Tech Stack
 
 ### 🔹 Languages & Paradigms
