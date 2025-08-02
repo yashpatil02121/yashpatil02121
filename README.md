@@ -41,23 +41,6 @@
 
 ---
 
-## 📂 Featured Repositories
-
-Here are some repositories I’ve built or contributed to:
-
-| Repo Name                | Description                                      |
-|--------------------------|--------------------------------------------------|
-| **`PYTHON`**             | Jupyter notebook projects on Python, data tools  |
-| **`javascript-simplilearn`** | Web projects and exercises in HTML/JavaScript       |
-| **`Data-science-internship`** | Python-based data‑science implementions             |
-| **`DSA`**                | C‑based data structures & algorithms practice    |
-| **`C-programs`**         | Collection of C language programs                |
-| **`Web-Development`**    | Basic-to-advanced HTML/CSS/JavaScript websites   |
-
-*(View all projects at the top of my profile)*
-
----
-
 ## 🧠 Learning & Interests
 
 - Currently diving into advanced **data science** and **machine learning**
