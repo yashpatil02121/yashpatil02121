@@ -1,6 +1,11 @@
-# Hi there 👋  
+# Hi there <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
+
 ## I’m **YASH SANJAY PATIL**  
 *Software Developer at Kulp Labs Pvt Ltd*
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Software+Developer+at+Kulp+Labs+Pvt+Ltd;Full-Stack+Engineer&center=true&width=500&height=40&color=A855F7&size=22">
+</p>
 
 - 🔭 I’m currently working on real-world full‑stack solutions  
 - 🌱 I’m exploring new tools, algorithms, and system integrations  
