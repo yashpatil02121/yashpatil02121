@@ -65,7 +65,7 @@
 
 ## 📞 Connect with Me
 
-- 🌐 Website/Portfolio: [portfolio‑yash‑ruby.vercel.app](https://portfolio-yash-ruby.vercel.app/)  
+- 🌐 Website/Portfolio: [portfolio‑yash‑patil.vercel.app](https://portfolio-yash-patil.vercel.app/)  
 - 💼 LinkedIn: [yash‑patil‑6655b5215](https://www.linkedin.com/in/yash-patil-6655b5215/)  
 - 🧠 LeetCode: [yashpatil2121](https://leetcode.com/u/yashpatil2121/)  
 - 🖥️ HackerRank: [patilyash02121](https://www.hackerrank.com/profile/patilyash02121/)  
