@@ -3,7 +3,7 @@
 ## I’m **YASH SANJAY PATIL**  
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Software+Developer+at+Smarter+Codes;Full-Stack+Engineer&center=true&width=500&height=40&color=A855F7&size=22">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Full-Stack+Developer+at+Smarter+Codes;&center=true&width=500&height=40&color=A855F7&size=22">
 </p>
 
 - 🔭 I’m currently working on real-world full‑stack solutions  
