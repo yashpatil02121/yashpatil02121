@@ -1,224 +1,231 @@
-<!-- ═══════════════════════ HEADER ═══════════════════════ -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:A855F7&height=220&section=header&text=Yash%20Sanjay%20Patil&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%E2%80%A2%20AI%20Tinkerer%20%E2%80%A2%20Problem%20Solver&descAlignY=58&descSize=18" width="100%"/>
-</p>
+<!--
+   ██╗   ██╗ █████╗ ███████╗██╗  ██╗
+   ╚██╗ ██╔╝██╔══██╗██╔════╝██║  ██║   👀 You opened the source. Respect.
+    ╚████╔╝ ███████║███████╗███████║   Psst — there's an easter egg at the bottom.
+     ╚██╔╝  ██╔══██║╚════██║██╔══██║   If you read this far, say hi:
+      ██║   ██║  ██║███████║██║  ██║   linkedin.com/in/yash-patil-6655b5215
+      ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+-->
 
 <p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=A855F7&center=true&vCenter=true&multiline=false&repeat=true&width=650&height=50&lines=Hi+there+%F0%9F%91%8B+I'm+Yash+Patil;Full-Stack+Developer+at+Smarter+Codes;TypeScript+%E2%80%A2+Python+%E2%80%A2+React+%E2%80%A2+Nuxt+%E2%80%A2+Django;Building+AI-powered+tools+%26+platforms;Turning+complex+problems+into+clean+code+%E2%9C%A8" alt="Typing SVG" />
+  <a href="https://patilyash.tech">
+    <img src="./assets/hero.svg" alt="YASH.DEV — Full Stack + AI. Building things that make developers' lives easier." width="100%"/>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://patilyash.tech"><img src="https://img.shields.io/badge/Website-patilyash.tech-A855F7?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
-  <a href="https://portfolio-yash-patil.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
-  <a href="https://www.linkedin.com/in/yash-patil-6655b5215/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="https://leetcode.com/u/yashpatil2121/"><img src="https://img.shields.io/badge/LeetCode-Solve-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a>
-  <a href="https://www.hackerrank.com/profile/patilyash02121/"><img src="https://img.shields.io/badge/HackerRank-Profile-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white"/></a>
+  <a href="https://patilyash.tech"><img src="https://img.shields.io/badge/patilyash.tech-A855F7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"/></a>
+  <a href="https://portfolio-yash-patil.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-161b22?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/></a>
+  <a href="https://www.linkedin.com/in/yash-patil-6655b5215/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://leetcode.com/u/yashpatil2121/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/></a>
+  <a href="https://www.hackerrank.com/profile/patilyash02121/"><img src="https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white" alt="HackerRank"/></a>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=yashpatil02121&label=Profile%20Views&color=A855F7&style=flat-square" alt="profile views"/>
-  <a href="https://github.com/yashpatil02121?tab=followers"><img src="https://img.shields.io/github/followers/yashpatil02121?label=Followers&style=flat-square&color=302b63&logo=github"/></a>
-  <img src="https://img.shields.io/badge/Public%20Repos-54-A855F7?style=flat-square&logo=github"/>
+  <img src="https://komarev.com/ghpvc/?username=yashpatil02121&label=visitors&color=A855F7&style=flat-square" alt="Profile views"/>
+  <a href="https://github.com/yashpatil02121?tab=followers"><img src="https://img.shields.io/github/followers/yashpatil02121?label=followers&style=flat-square&color=7C3AED&logo=github" alt="Followers"/></a>
+  <a href="https://github.com/yashpatil02121?tab=repositories"><img src="https://img.shields.io/badge/repos-54-22D3EE?style=flat-square&logo=github" alt="Repos"/></a>
 </p>
 
----
-
-<!-- ═══════════════════════ ABOUT ═══════════════════════ -->
-## <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"> About Me
-
-<table>
-<tr>
-<td width="55%">
-
-```js
-const yash = {
-  name:        "Yash Sanjay Patil",
-  role:        "Full-Stack Developer",
-  company:     "Smarter Codes",
-  location:    "Navi Mumbai, India 🇮🇳",
-  code:        ["TypeScript", "Python", "JavaScript", "Java", "C"],
-  frontend:    ["React", "Next.js", "Nuxt.js", "Tailwind"],
-  backend:     ["Django", "FastAPI", "Node.js", "Express"],
-  dataAndAI:   ["Machine Learning", "NLP", "LLMs", "Power BI"],
-  currently:   "Building AI-powered dev tools & SaaS platforms",
-  funFact:     "I turn complex challenges into clean solutions ✨",
-};
-```
-
-</td>
-<td width="45%">
-
-- 🔭 Working on **real-world full-stack & AI products**
-- 🤖 Building **developer tooling** with LLMs & Claude Code
-- 🌱 Diving deep into **Data Science & ML**
-- ⚡ Obsessed with **clean code & scalable design**
-- 🧩 Sharpening skills on **LeetCode & HackerRank**
-- 💬 Ask me about **React, Django, FastAPI, Python**
-
-</td>
-</tr>
-</table>
-
----
-
-<!-- ═══════════════════════ TECH STACK ═══════════════════════ -->
-## 🛠️ Tech Stack
-
-<h4 align="center">💻 Languages</h4>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,python,java,c,html,css&perline=7" />
-</p>
-
-<h4 align="center">🎨 Frontend</h4>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,nuxtjs,vue,tailwind,vite&perline=6" />
-</p>
-
-<h4 align="center">⚙️ Backend & Databases</h4>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=django,fastapi,nodejs,express,postgres,mysql,mongodb,elasticsearch&perline=8" />
-</p>
-
-<h4 align="center">🧠 Data Science & AI</h4>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn&perline=3" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" height="40"/>
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" height="40"/>
-  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" height="40"/>
-</p>
-
-<h4 align="center">🧰 Tools & Platforms</h4>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=git,github,githubactions,docker,vercel,vscode,androidstudio,postman,linux&perline=9" />
-</p>
-
----
-
-<!-- ═══════════════════════ FEATURED PROJECTS ═══════════════════════ -->
-## 🚀 Featured Projects
-
-<p align="center">
-  <a href="https://github.com/yashpatil02121/feature-planner">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=feature-planner&theme=tokyonight&hide_border=true&bg_color=0d1117" />
-  </a>
-  <a href="https://github.com/yashpatil02121/draftly">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=draftly&theme=tokyonight&hide_border=true&bg_color=0d1117" />
-  </a>
-  <a href="https://github.com/yashpatil02121/domsearch-frontend">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=domsearch-frontend&theme=tokyonight&hide_border=true&bg_color=0d1117" />
-  </a>
-  <a href="https://github.com/yashpatil02121/domsearch-backend">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=domsearch-backend&theme=tokyonight&hide_border=true&bg_color=0d1117" />
-  </a>
-  <a href="https://github.com/yashpatil02121/artifact-validator">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=artifact-validator&theme=tokyonight&hide_border=true&bg_color=0d1117" />
-  </a>
-  <a href="https://github.com/yashpatil02121/Blog-Generation-App-using-Llama-2-7B-Chat-GGML">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=Blog-Generation-App-using-Llama-2-7B-Chat-GGML&theme=tokyonight&hide_border=true&bg_color=0d1117" />
-  </a>
-</p>
-
-<details>
-<summary><b>📂 More projects — click to expand</b></summary>
 <br/>
 
-| Project | Stack | Category |
-|---|---|---|
-| [🍽️ platepartners](https://github.com/yashpatil02121/platepartners) | TypeScript | Web App |
-| [🛠️ makerz_network_frontend](https://github.com/yashpatil02121/makerz_network_frontend) | TypeScript | Web Platform |
-| [🎙️ voismi-frontend](https://github.com/yashpatil02121/voismi-frontend) | TypeScript | Web App |
-| [📝 kulp-blogs](https://github.com/yashpatil02121/kulp-blogs) | TypeScript | Blog Platform |
-| [🍱 prathamesh-caters](https://github.com/yashpatil02121/prathamesh-caters) | TypeScript | Business Website |
-| [⚡ portfolio-fastapi](https://github.com/yashpatil02121/portfolio-fastapi) | Python · FastAPI | Backend |
-| [🔄 xmlToJson](https://github.com/yashpatil02121/xmlToJson-frontend) | JavaScript · Node | Dev Tool |
-| [🏷️ Tags2Braces](https://github.com/yashpatil02121/Tags2Braces) | Java | Dev Tool |
-| [🚌 Enhanced Routing for Educational Bus Networks](https://github.com/yashpatil02121/Enhanced-Routing-Efficiency-for-Educational-Bus-Networks) | Python · Web | B.E. Major Project |
-| [🛡️ Android Botnet Detection using ML](https://github.com/yashpatil02121/Android-Botnet-Detection-Using-Machine-Learning) | Python · ML | Security / ML |
-| [💧 Digital Water Marking](https://github.com/yashpatil02121/Digital-Water-Marking) | Python | Image Processing |
-| [🚗 Car Trade with Price Prediction](https://github.com/yashpatil02121/CAR-TRADE-WITH-PRICE-PREDICTION) | Jupyter · ML | Mini Project |
-| [📰 Text Summarization using NLP](https://github.com/yashpatil02121/Text-Summarization-using-NLP) | NLP | AI |
-| [🧮 DSA](https://github.com/yashpatil02121/DSA) | C | Algorithms |
+<!-- ───────────────────────── 01 · whoami ───────────────────────── -->
+<h2 align="left"><code>01</code> &nbsp;<code>$ whoami</code></h2>
+
+<p align="center">
+  <img src="./assets/terminal.svg" alt="Terminal running neofetch: Yash Sanjay Patil, Full-Stack Developer at Smarter Codes, focused on AI and developer tools" width="100%"/>
+</p>
+
+<!-- ───────────────────────── 02 · about ───────────────────────── -->
+<h2 align="left"><code>02</code> &nbsp;<code>cat yash.ts</code></h2>
+
+<p align="center">
+  <img src="./assets/editor.svg" alt="VS Code window typing out a TypeScript object describing Yash's role, stack and mission" width="100%"/>
+</p>
+
+> I like the part of software that sits between people and machines — APIs that feel obvious, UIs that stay out of the way,
+> and tools that remove a step from a developer's day. Lately that means **LLM-powered developer tooling**: Claude Code plugins,
+> evaluation harnesses and automation that turns "ugh, manual" into one command.
+
+<!-- ───────────────────────── 03 · building ───────────────────────── -->
+<h2 align="left"><code>03</code> &nbsp;<code>./now --building</code></h2>
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h3>🧭 feature-planner</h3>
+      <img src="https://img.shields.io/badge/status-shipping-3FB950?style=flat-square" alt="status"/><br/><br/>
+      A <b>Claude Code plugin</b> that plans features before you build them — reads your codebase, designs an approach that fits your conventions and writes a reviewable plan to <code>plans/</code>. Run <code>/fp Add password reset</code>.
+      <br/><br/>
+      <img src="https://skillicons.dev/icons?i=bash,githubactions,md" height="28" alt="stack"/>
+      <br/><br/>
+      <a href="https://github.com/yashpatil02121/feature-planner"><b>→ Repo</b></a>
+    </td>
+    <td width="33%" valign="top">
+      <h3>🔍 search-auditor</h3>
+      <img src="https://img.shields.io/badge/status-active-A855F7?style=flat-square" alt="status"/> <img src="https://img.shields.io/badge/@-Smarter%20Codes-161b22?style=flat-square" alt="work"/><br/><br/>
+      A generic <b>e-commerce search-relevance harness</b>. Point it at any store URL: it scrapes real products, generates queries from their attributes, runs them through the site's own search and reports what it can't find.
+      <br/><br/>
+      <img src="https://skillicons.dev/icons?i=ts,nodejs,docker" height="28" alt="stack"/>
+      <br/><br/>
+      <sub>🔒 Private · work project</sub>
+    </td>
+    <td width="33%" valign="top">
+      <h3>📝 draftly</h3>
+      <img src="https://img.shields.io/badge/status-live-22D3EE?style=flat-square" alt="status"/><br/><br/>
+      A lightweight <b>document workspace</b>: rich-text editing with Tiptap, <code>.txt</code> / <code>.md</code> / <code>.docx</code> import and read-only sharing between users.
+      <br/><br/>
+      <img src="https://skillicons.dev/icons?i=ts,react,nodejs" height="28" alt="stack"/>
+      <br/><br/>
+      <a href="https://draftly-nwc5.onrender.com"><b>→ Live demo</b></a> · <a href="https://github.com/yashpatil02121/draftly"><b>Repo</b></a>
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary><b>📂 &nbsp;More things I've built</b></summary>
+<br/>
+
+| Project | What | Stack | Links |
+|---|---|---|---|
+| 🍽️ **platepartners** | Web app | TypeScript · React | [Live](https://platepartners.vercel.app/) · [Code](https://github.com/yashpatil02121/platepartners) |
+| 🍱 **prathamesh-caters** | Business website | TypeScript | [Live](https://prathamesh-caters.vercel.app) · [Code](https://github.com/yashpatil02121/prathamesh-caters) |
+| 🛠️ **makerz_network_frontend** | Web platform | TypeScript · React | [Code](https://github.com/yashpatil02121/makerz_network_frontend) |
+| ✅ **artifact-validator** | Validation API | Python · FastAPI | [Code](https://github.com/yashpatil02121/artifact-validator) |
+| 🔎 **domsearch** | Search frontend + backend | TypeScript · Python | [Frontend](https://github.com/yashpatil02121/domsearch-frontend) · [Backend](https://github.com/yashpatil02121/domsearch-backend) |
+| 🎙️ **voismi-frontend** | Web app | Next.js | [Code](https://github.com/yashpatil02121/voismi-frontend) |
+| 🔄 **xmlToJson** | XML → JSON converter | JavaScript · Node.js | [Live](https://xml-to-json-frontend.vercel.app) · [Code](https://github.com/yashpatil02121/xmlToJson-frontend) |
+| 🏷️ **Tags2Braces** | Dev tool | Java | [Code](https://github.com/yashpatil02121/Tags2Braces) |
+| ⚡ **portfolio-fastapi** | Portfolio backend | Python · FastAPI | [Code](https://github.com/yashpatil02121/portfolio-fastapi) |
+| 🦙 **Blog Generator (Llama 2)** | LLM blog writer | Python · Llama-2-7B | [Code](https://github.com/yashpatil02121/Blog-Generation-App-using-Llama-2-7B-Chat-GGML) |
+| 🛡️ **Android Botnet Detection** | ML security | Python · ML | [Code](https://github.com/yashpatil02121/Android-Botnet-Detection-Using-Machine-Learning) |
+| 🚌 **Educational Bus Routing** | B.E. major project | Python · Web | [Code](https://github.com/yashpatil02121/Enhanced-Routing-Efficiency-for-Educational-Bus-Networks) |
+| 💧 **Digital Watermarking** | Image processing | Python | [Code](https://github.com/yashpatil02121/Digital-Water-Marking) |
+| 🚗 **Car Trade Price Prediction** | ML mini project | Jupyter · ML | [Code](https://github.com/yashpatil02121/CAR-TRADE-WITH-PRICE-PREDICTION) |
 
 </details>
 
----
+<!-- ───────────────────────── 04 · stack ───────────────────────── -->
+<h2 align="left"><code>04</code> &nbsp;<code>ls ~/stack</code></h2>
 
-<!-- ═══════════════════════ STATS ═══════════════════════ -->
-## 📊 GitHub Analytics
+<table align="center">
+  <tr>
+    <td align="center" width="140"><sub><b>LANGUAGES</b></sub></td>
+    <td><img src="https://skillicons.dev/icons?i=ts,js,python,java,c,html,css&theme=dark" alt="Languages"/></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>FRONTEND</b></sub></td>
+    <td><img src="https://skillicons.dev/icons?i=react,nextjs,nuxtjs,vue,tailwind,vite&theme=dark" alt="Frontend"/></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>BACKEND &amp; DATA</b></sub></td>
+    <td><img src="https://skillicons.dev/icons?i=django,fastapi,nodejs,express,postgres,mysql,mongodb,elasticsearch&theme=dark" alt="Backend"/></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>AI &amp; ML</b></sub></td>
+    <td><img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn&theme=dark" alt="AI and ML"/></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>DEVOPS</b></sub></td>
+    <td><img src="https://skillicons.dev/icons?i=docker,githubactions,vercel,linux,git,github&theme=dark" alt="DevOps"/></td>
+  </tr>
+</table>
+
+<!-- ───────────────────────── 05 · journey ───────────────────────── -->
+<h2 align="left"><code>05</code> &nbsp;<code>git log --journey</code></h2>
 
 <p align="center">
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=yashpatil02121&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=A855F7&icon_color=A855F7"/>
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=yashpatil02121&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=A855F7"/>
+  <img src="./assets/timeline.svg" alt="Timeline: 2022 Hello World, 2023 Into the Data, 2024 Applied AI, 2025 Shipping Products, 2026 AI Developer Tools" width="100%"/>
 </p>
+
+<!-- ───────────────────────── 06 · setup ───────────────────────── -->
+<h2 align="left"><code>06</code> &nbsp;<code>cat ~/.setup</code></h2>
+
+```yaml
+editor:    VS Code  +  Cursor
+ai:        Claude Code                 # pair-programmer & plugin playground
+terminal:  PowerShell  ·  Git Bash     # muscle memory: git, pnpm, docker
+runtime:   Node.js  ·  Python          # pnpm · venv · uvicorn
+ship:      Docker  ·  GitHub Actions  ·  Vercel  ·  Render
+data:      PostgreSQL  ·  MongoDB  ·  Elasticsearch
+mobile:    Android Studio
+```
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=yashpatil02121&theme=tokyonight&hide_border=true&background=0d1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7" alt="GitHub Streak"/>
+  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code"/>
+  <img src="https://img.shields.io/badge/Cursor-000000?style=flat-square&logo=cursor&logoColor=white" alt="Cursor"/>
+  <img src="https://img.shields.io/badge/Claude%20Code-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Code"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman"/>
+  <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?style=flat-square&logo=androidstudio&logoColor=white" alt="Android Studio"/>
 </p>
 
+<!-- ───────────────────────── 07 · activity ───────────────────────── -->
+<h2 align="left"><code>07</code> &nbsp;<code>git shortlog --city</code></h2>
+
+<!-- Generated daily by .github/workflows/profile-3d.yml -->
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yashpatil02121&bg_color=0d1117&color=A855F7&line=A855F7&point=ffffff&area=true&hide_border=true&custom_title=Contribution%20Activity" width="100%"/>
+  <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D contribution city" width="100%"/>
 </p>
 
----
-
-<!-- ═══════════════════════ TROPHIES ═══════════════════════ -->
-## 🏆 GitHub Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=yashpatil02121&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=10&margin-h=10" alt="GitHub Trophies" />
-</p>
-
----
-
-<!-- ═══════════════════════ SNAKE ═══════════════════════ -->
-<!-- Requires .github/workflows/snake.yml in this repo (Platane/snk) -->
-## 🐍 Watch the Snake Eat My Contributions
-
+<!-- Generated every 12h by .github/workflows/snake.yml -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yashpatil02121/yashpatil02121/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yashpatil02121/yashpatil02121/output/github-contribution-grid-snake.svg" />
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/yashpatil02121/yashpatil02121/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yashpatil02121/yashpatil02121/output/github-contribution-grid-snake-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yashpatil02121/yashpatil02121/output/github-contribution-grid-snake.svg"/>
+    <img alt="Snake eating the contribution graph" src="https://raw.githubusercontent.com/yashpatil02121/yashpatil02121/output/github-contribution-grid-snake-dark.svg"/>
   </picture>
 </p>
 
----
+<details>
+<summary><b>📊 &nbsp;The numbers</b></summary>
+<br/>
+<p align="center">
+  <img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api?username=yashpatil02121&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=A855F7&icon_color=A855F7&text_color=E6EDF3&ring_color=A855F7" alt="GitHub stats"/>
+  <img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=yashpatil02121&layout=compact&langs_count=8&hide_border=true&bg_color=0d1117&title_color=A855F7&text_color=E6EDF3" alt="Top languages"/>
+</p>
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=yashpatil02121&hide_border=true&background=0d1117&ring=A855F7&fire=EC4899&currStreakLabel=A855F7&sideLabels=E6EDF3&dates=8B949E&currStreakNum=E6EDF3&sideNums=E6EDF3&stroke=30363d" alt="GitHub streak"/>
+</p>
 
-<!-- ═══════════════════════ LEARNING ═══════════════════════ -->
-## 🧠 Currently Learning & Exploring
+<!-- WakaTime (optional): create a free account at wakatime.com, install the editor plugin,
+     make your profile public, then uncomment and set your WakaTime username.
+<p align="center">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/wakatime?username=YOUR_WAKATIME_USERNAME&layout=compact&hide_border=true&bg_color=0d1117&title_color=A855F7&text_color=E6EDF3" alt="WakaTime stats"/>
+</p>
+-->
+</details>
 
-```diff
-+ 🤖 Advanced Machine Learning & LLM application development
-+ 📈 Data Science — statistics, modeling & visualization
-+ ⚙️ Algorithm optimization & efficient system design
-+ 🔗 AI agents, developer tooling & automation workflows
-+ 🏗️ Merging robust backend logic with delightful frontend UX
-```
-
----
-
-<!-- ═══════════════════════ COLLAB ═══════════════════════ -->
-## 🤝 Let's Collaborate!
+<!-- ───────────────────────── 08 · contact ───────────────────────── -->
+<h2 align="left"><code>08</code> &nbsp;<code>ping yash</code></h2>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Open+to+open-source+collaborations;Web+Dev+%E2%80%A2+Data+Science+%E2%80%A2+AI+%E2%80%A2+CP;Let's+build+something+impactful+together+%F0%9F%9A%80" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=2800&pause=900&color=A855F7&center=true&vCenter=true&width=620&lines=Open+to+open-source%2C+AI+tooling+%26+full-stack+collabs;Got+a+repetitive+dev+workflow%3F+Let's+automate+it.;%24+git+commit+-m+%22let's+build+something%22" alt="Typing: open to collaboration"/>
 </p>
 
 <p align="center">
-  <i>I'm open to collaboration on open-source, data science, web development, or competitive programming projects. Feel free to reach out!</i>
+  <a href="https://www.linkedin.com/in/yash-patil-6655b5215/"><b>LinkedIn</b></a> &nbsp;·&nbsp;
+  <a href="https://patilyash.tech"><b>patilyash.tech</b></a> &nbsp;·&nbsp;
+  <a href="https://leetcode.com/u/yashpatil2121/"><b>LeetCode</b></a> &nbsp;·&nbsp;
+  <a href="https://www.hackerrank.com/profile/patilyash02121/"><b>HackerRank</b></a>
 </p>
 
+<br/>
+
+<details>
+<summary><sub>⬆️ ⬆️ ⬇️ ⬇️ ⬅️ ➡️ ⬅️ ➡️ 🅱️ 🅰️</sub></summary>
+<br/>
 <p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random Dev Quote"/>
+  <b>🥚 You found the easter egg!</b><br/>
+  <sub>+30 lives · here's a fresh joke, rerolled every time the page loads:</sub><br/><br/>
+  <img src="https://readme-jokes.vercel.app/api?bgColor=%230d1117&textColor=%23E6EDF3&aColor=%23A855F7&borderColor=%2330363d" alt="Random programming joke"/>
+  <br/><br/>
+  <code>while (alive) { eat(); sleep(); code(); repeat(); }</code>
 </p>
+</details>
 
 <p align="center">
-  ✨ <i>Fun fact: I'm passionate about turning complex challenges into efficient, clean solutions!</i>
-</p>
-
-<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:A855F7,50:302b63,100:0f0c29&height=120&section=footer" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:A855F7,100:22D3EE&height=110&section=footer&text=thanks%20for%20stopping%20by&fontSize=18&fontColor=ffffff&fontAlignY=72&animation=twinkling" width="100%" alt=""/>
 </p>
