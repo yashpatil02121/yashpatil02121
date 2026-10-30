@@ -105,8 +105,41 @@
 
 </details>
 
-<!-- ───────────────────────── 04 · stack ───────────────────────── -->
-<h2 align="left"><code>04</code> &nbsp;<code>ls ~/stack</code></h2>
+<!-- ───────────────────────── 04 · live ───────────────────────── -->
+<h2 align="left"><code>04</code> &nbsp;<code>tail -f activity.log</code></h2>
+
+<!-- ACTIVITY:START -->
+<!-- This block is rewritten automatically by scripts/update_readme.py -->
+
+<table>
+<tr>
+<td width="62%" valign="top">
+<b>⚡ Recent activity</b><br/><br/>
+<sub><code>Oct 27</code></sub> &nbsp;📦 Pushed to <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a> — <code>Document /fp as the everyday command</code><br/>
+<sub><code>Oct 27</code></sub> &nbsp;🚀 Released <a href="https://github.com/yashpatil02121/feature-planner/releases/tag/v1.1.0">v1.1.0</a> of <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a><br/>
+<sub><code>Oct 26</code></sub> &nbsp;🚀 Released <a href="https://github.com/yashpatil02121/feature-planner/releases/tag/v1.0.0">v1.0.0</a> of <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a><br/>
+<sub><code>Oct 26</code></sub> &nbsp;📦 Pushed to <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a> — <code>Release 1.0.0: bump version, finalize changelog, fix install docs</code><br/>
+<sub><code>Oct 22</code></sub> &nbsp;📦 Pushed to <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a> — <code>Size plans to the feature and add baseline comparison results</code><br/>
+<sub><code>Oct 22</code></sub> &nbsp;🚀 Released <a href="https://github.com/yashpatil02121/feature-planner/releases/tag/v0.3.0">v0.3.0</a> of <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a><br/>
+</td>
+<td width="38%" valign="top">
+<b>🔥 Most recently pushed</b>
+<ol>
+<li><a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a><br/><sub>Claude Code plugin · plans features before you build</sub></li>
+<li><a href="https://github.com/yashpatil02121/draftly">draftly</a><br/><sub>rich-text document workspace with sharing</sub></li>
+<li><a href="https://github.com/yashpatil02121/prathamesh-caters">prathamesh-caters</a><br/><sub>catering business website</sub></li>
+</ol>
+<sub>📁 54 public repos · 🧬 8 languages · ⭐ 2 stars</sub>
+</td>
+</tr>
+</table>
+
+<p align="right"><sub>🤖 auto-refreshed 30 Oct 2026 by <a href="scripts/update_readme.py">update_readme.py</a></sub></p>
+
+<!-- ACTIVITY:END -->
+
+<!-- ───────────────────────── 05 · stack ───────────────────────── -->
+<h2 align="left"><code>05</code> &nbsp;<code>ls ~/stack</code></h2>
 
 <table align="center">
   <tr>
@@ -131,15 +164,15 @@
   </tr>
 </table>
 
-<!-- ───────────────────────── 05 · journey ───────────────────────── -->
-<h2 align="left"><code>05</code> &nbsp;<code>git log --journey</code></h2>
+<!-- ───────────────────────── 06 · journey ───────────────────────── -->
+<h2 align="left"><code>06</code> &nbsp;<code>git log --journey</code></h2>
 
 <p align="center">
   <img src="./assets/timeline.svg" alt="Timeline: 2022 Hello World, 2023 Into the Data, 2024 Applied AI, 2025 Shipping Products, 2026 AI Developer Tools" width="100%"/>
 </p>
 
-<!-- ───────────────────────── 06 · setup ───────────────────────── -->
-<h2 align="left"><code>06</code> &nbsp;<code>cat ~/.setup</code></h2>
+<!-- ───────────────────────── 07 · setup ───────────────────────── -->
+<h2 align="left"><code>07</code> &nbsp;<code>cat ~/.setup</code></h2>
 
 ```yaml
 editor:    VS Code  +  Cursor
@@ -162,8 +195,8 @@ mobile:    Android Studio
   <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?style=flat-square&logo=androidstudio&logoColor=white" alt="Android Studio"/>
 </p>
 
-<!-- ───────────────────────── 07 · activity ───────────────────────── -->
-<h2 align="left"><code>07</code> &nbsp;<code>git shortlog --city</code></h2>
+<!-- ───────────────────────── 08 · activity ───────────────────────── -->
+<h2 align="left"><code>08</code> &nbsp;<code>git shortlog --city</code></h2>
 
 <!-- Generated daily by .github/workflows/profile-3d.yml -->
 <p align="center">
@@ -198,8 +231,8 @@ mobile:    Android Studio
 -->
 </details>
 
-<!-- ───────────────────────── 08 · contact ───────────────────────── -->
-<h2 align="left"><code>08</code> &nbsp;<code>ping yash</code></h2>
+<!-- ───────────────────────── 09 · contact ───────────────────────── -->
+<h2 align="left"><code>09</code> &nbsp;<code>ping yash</code></h2>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=2800&pause=900&color=A855F7&center=true&vCenter=true&width=620&lines=Open+to+open-source%2C+AI+tooling+%26+full-stack+collabs;Got+a+repetitive+dev+workflow%3F+Let's+automate+it.;%24+git+commit+-m+%22let's+build+something%22" alt="Typing: open to collaboration"/>

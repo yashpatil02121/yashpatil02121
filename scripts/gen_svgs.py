@@ -1,14 +1,14 @@
 """Generates the animated SVGs for the GitHub profile README.
 
 All animation is CSS inside the SVG (works when GitHub serves it through <img>).
-Usage: python gen_svgs.py <out_dir>
+Usage: python scripts/gen_svgs.py [out_dir]   (default: assets)
+scripts/update_readme.py calls terminal() with live GitHub data.
 """
 import sys
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-OUT = Path(sys.argv[1])
-OUT.mkdir(parents=True, exist_ok=True)
+OUT = Path("assets")
 
 BG, PANEL, BORDER = "#0d1117", "#161b22", "#30363d"
 PURPLE, VIOLET, PINK, CYAN, GREEN, YELLOW = "#A855F7", "#7C3AED", "#EC4899", "#22D3EE", "#3FB950", "#E3B341"
@@ -106,7 +106,15 @@ def typed_line(a, x, y, prompt, cmd, start, bg):
 
 
 # ─────────────────────────────── terminal.svg ───────────────────────────────
-def terminal():
+DEFAULT_NOW = [
+    ("feature-planner", "Claude Code plugin · plans features before you build"),
+    ("search-auditor", "e-commerce search-relevance testing harness"),
+    ("draftly", "rich-text document workspace with sharing"),
+]
+
+
+def terminal(now=DEFAULT_NOW, status="Building something cool..."):
+    """`now`: up to 3 (repo, tagline) rows; `status`: the neofetch Status value."""
     W, H, CYCLE = 860, 520, 18
     tbg = "#0b0f17"
     a = Anim(CYCLE)
@@ -151,7 +159,7 @@ def terminal():
         [("Backend   ", CYAN), ("Django · FastAPI · Node.js", TEXT)],
         [("AI        ", CYAN), ("LLMs · NLP · Claude Code plugins", TEXT)],
         [("Focus     ", CYAN), ("AI + Developer Tools", TEXT)],
-        [("Status    ", CYAN), ("● ", GREEN), ("Building something cool...", GREEN)],
+        [("Status    ", CYAN), ("● ", GREEN), (status[:58], GREEN)],
     ]
     for i, spans in enumerate(info):
         cls = a.appear(show + 0.1 + i * 0.11, 0.2)
@@ -164,16 +172,12 @@ def terminal():
 
     line2, t2 = typed_line(a, x0, 410, "yash@dev:~$ ", "./now --top 3", show + 2.6, tbg)
     body.append(f'<g font-family="{MONO}">{line2}</g>')
-    now = [
-        ("feature-planner ", "Claude Code plugin · plans features before you build"),
-        ("search-auditor  ", "e-commerce search-relevance testing harness"),
-        ("draftly         ", "rich-text document workspace with sharing"),
-    ]
+    now = [(n[:17].ljust(19), d[:53]) for n, d in now[:3]]
     for i, (name, desc) in enumerate(now):
         cls = a.appear(t2 + 0.35 + i * 0.25, 0.2)
         body.append(f'<g font-family="{MONO}">' + mono_text(x0 + 16, 436 + i * 22, [("▸ ", PINK), (name, PURPLE), (desc, MUTED)], cls=cls) + "</g>")
 
-    end_t = t2 + 0.35 + 3 * 0.25 + 0.4
+    end_t = t2 + 0.35 + len(now) * 0.25 + 0.4
     fin = a.appear(end_t, 0.1)
     p_w = len("yash@dev:~$ ") * CW
     body.append(
@@ -425,8 +429,12 @@ def hero():
     (OUT / "hero.svg").write_text(svg, encoding="utf-8")
 
 
-hero()
-terminal()
-editor()
-timeline()
-print("wrote", *sorted(p.name for p in OUT.iterdir()))
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        OUT = Path(sys.argv[1])
+    OUT.mkdir(parents=True, exist_ok=True)
+    hero()
+    terminal()
+    editor()
+    timeline()
+    print("wrote", *sorted(p.name for p in OUT.glob("*.svg")))
