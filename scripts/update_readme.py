@@ -2,8 +2,10 @@
 
 - assets/terminal.svg: `./now --top 3` lists the 3 most recently pushed repos,
   and the neofetch Status line shows the latest push.
-- README.md: rewrites the block between <!-- ACTIVITY:START --> and <!-- ACTIVITY:END -->
-  with recent public activity, plus the public repo count badge.
+- README.md: rewrites the blocks between <!-- ACTIVITY:START/END --> (recent public
+  activity) and <!-- GUESTBOOK:START/END --> (latest signers), plus the repo count badge.
+- assets/stats, assets/projects, assets/sections, assets/connect: self-hosted cards
+  drawn by scripts/build_cards.py from GraphQL data (needs GITHUB_TOKEN).
 
 Runs in .github/workflows/update-readme.yml. Locally: python scripts/update_readme.py
 (set GITHUB_TOKEN to avoid the 60 requests/hour anonymous limit).
@@ -19,6 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import build_cards  # noqa: E402
 import gen_svgs  # noqa: E402
 
 USER = os.environ.get("GITHUB_USER", "yashpatil02121")
@@ -28,6 +31,7 @@ MAX_ACTIVITY = 6
 
 # Taglines for repos whose GitHub description is empty or too long for the terminal.
 TAGLINES = json.loads((ROOT / "scripts" / "taglines.json").read_text(encoding="utf-8"))
+FEATURED = json.loads((ROOT / "scripts" / "featured.json").read_text(encoding="utf-8"))["projects"]
 
 
 def api(path):
@@ -38,6 +42,132 @@ def api(path):
     })
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
+
+
+def gql(query, **variables):
+    req = urllib.request.Request("https://api.github.com/graphql", method="POST",
+                                 data=json.dumps({"query": query, "variables": variables}).encode(),
+                                 headers={"Authorization": f"Bearer {TOKEN}", "User-Agent": f"{USER}-profile-readme"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        out = json.load(r)
+    if out.get("errors"):
+        raise RuntimeError(out["errors"])
+    return out["data"]
+
+
+REPO_FIELDS = """name description url homepageUrl stargazerCount pushedAt isPrivate isFork isArchived
+  primaryLanguage { name color }
+  languages(first: 8, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name color } } }
+  releases(first: 3, orderBy: {field: CREATED_AT, direction: DESC}) { nodes { name tagName publishedAt description isPrerelease isDraft } }"""
+
+
+def card_data(today):
+    """Everything build_cards.build_all needs. Private repos are always filtered out."""
+    now = datetime.now(timezone.utc)
+    base = gql(f"""query($u: String!, $since: DateTime!) {{ user(login: $u) {{
+        createdAt followers {{ totalCount }}
+        repositories(ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false, first: 100,
+                     orderBy: {{field: PUSHED_AT, direction: DESC}}) {{ totalCount nodes {{ {REPO_FIELDS} }} }}
+        year: contributionsCollection {{ contributionYears totalCommitContributions totalPullRequestContributions
+                                         contributionCalendar {{ totalContributions }} }}
+        month: contributionsCollection(from: $since) {{
+          commitContributionsByRepository(maxRepositories: 25) {{
+            repository {{ name description isPrivate primaryLanguage {{ name color }} }} contributions {{ totalCount }} }} }}
+    }} }}""", u=USER, since=(now - timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%SZ"))["user"]
+
+    years = sorted(base["year"]["contributionYears"])
+    aliases = " ".join(
+        f'y{y}: contributionsCollection(from: "{y}-01-01T00:00:00Z", to: "{y}-12-31T23:59:59Z") '
+        "{ contributionCalendar { weeks { contributionDays { date contributionCount } } } }" for y in years)
+    cal = gql(f"query($u: String!) {{ user(login: $u) {{ {aliases} }} }}", u=USER)["user"]
+    by_year = {}
+    for y in years:
+        days = [(datetime.strptime(d["date"], "%Y-%m-%d").date(), d["contributionCount"])
+                for w in cal[f"y{y}"]["contributionCalendar"]["weeks"] for d in w["contributionDays"]]
+        by_year[y] = sorted(d for d in days if d[0].year == y)
+    all_days = sorted(d for days in by_year.values() for d in days if d[0] <= today)
+    last_year = [d for d in all_days if d[0] > today - timedelta(days=365)]
+
+    repos = [r for r in base["repositories"]["nodes"] if not r["isPrivate"] and not r["isArchived"] and r["name"] != USER]
+    by_name = {r["name"]: r for r in repos}
+    langs = {}
+    for r in repos:
+        for e in r["languages"]["edges"]:
+            n = e["node"]["name"]
+            if n in ("Jupyter Notebook", "HTML", "CSS", "SCSS"):
+                continue  # notebooks and markup swamp the byte counts
+            size, color = langs.get(n, (0, e["node"]["color"] or "#8B949E"))
+            langs[n] = (size + e["size"], color)
+
+    def tag(name, desc):
+        return TAGLINES.get(name) or desc or "work in progress"
+
+    focus = [{
+        "name": c["repository"]["name"], "commits": c["contributions"]["totalCount"],
+        "tagline": tag(c["repository"]["name"], c["repository"]["description"]),
+        "language": (c["repository"]["primaryLanguage"] or {}).get("name"),
+        "color": (c["repository"]["primaryLanguage"] or {}).get("color") or "#8B949E",
+    } for c in base["month"]["commitContributionsByRepository"]
+        if not c["repository"]["isPrivate"] and c["repository"]["name"] != USER]
+
+    releases = sorted(({
+        "repo": r["name"], "tag": rel["tagName"], "name": rel["name"] or rel["tagName"],
+        "notes": rel["description"], "date": when(rel["publishedAt"]).date(),
+    } for r in repos for rel in r["releases"]["nodes"]
+        if rel["publishedAt"] and not rel["isDraft"] and not rel["isPrerelease"]), key=lambda x: x["date"], reverse=True)
+
+    projects = []
+    for f in FEATURED:
+        r = by_name.get(f["name"])
+        if f.get("private"):
+            projects.append({**f, "pushed": None})
+            continue
+        if not r:
+            print(f"featured repo {f['name']} not found or not public, skipped")
+            continue
+        lang = r["primaryLanguage"] or {}
+        projects.append({
+            "name": r["name"], "tagline": f.get("tagline") or tag(r["name"], r["description"]),
+            "language": lang.get("name"), "color": lang.get("color"), "stars": r["stargazerCount"],
+            "pushed": when(r["pushedAt"]).date(), "live": bool(f.get("live") or r["homepageUrl"]),
+        })
+
+    return {
+        "stats": {
+            "contributions": base["year"]["contributionCalendar"]["totalContributions"],
+            "commits": base["year"]["totalCommitContributions"],
+            "prs": base["year"]["totalPullRequestContributions"],
+            "repos": base["repositories"]["totalCount"],
+            "stars": sum(r["stargazerCount"] for r in repos),
+            "followers": base["followers"]["totalCount"],
+            "since": when(base["createdAt"]).year,
+            "days": last_year,
+            "languages": [(n, s, c) for n, (s, c) in sorted(langs.items(), key=lambda kv: -kv[1][0])],
+        },
+        "years": by_year,
+        "focus": focus,
+        "releases": releases,
+        "projects": projects,
+    }
+
+
+def guestbook_block():
+    """Latest guestbook signers (avatars only: visitor messages stay on the issues)."""
+    try:
+        issues = api(f"/repos/{USER}/{USER}/issues?labels=guestbook&state=all&per_page=12")
+    except Exception as e:
+        print(f"guestbook skipped: {e}")
+        issues = []
+    seen, people = set(), []
+    for i in issues:
+        login = i["user"]["login"]
+        if login not in seen and i["user"]["type"] == "User":
+            seen.add(login)
+            people.append(f'<a href="{html.escape(i["html_url"])}"><img src="https://github.com/{html.escape(login)}.png?size=64" '
+                          f'width="40" height="40" alt="{html.escape(login)}" title="{html.escape(login)}"/></a>')
+    inner = (" ".join(people[:10]) + "<br/><sub>latest signatures</sub>") if people else \
+        "<sub>No signatures yet. Be the first! ✍️</sub>"
+    return "\n".join(["<!-- GUESTBOOK:START -->", '<p align="center">', inner, "</p>", "<!-- GUESTBOOK:END -->"])
 
 
 def when(iso):
@@ -163,11 +293,19 @@ def main():
         "<!-- ACTIVITY:END -->",
     ])
 
+    if TOKEN:
+        today = datetime.now(IST).date()
+        build_cards.build_all(card_data(today), today)
+    else:
+        print("no GITHUB_TOKEN: skipped the GraphQL cards")
+
     readme_path = ROOT / "README.md"
     readme = readme_path.read_text(encoding="utf-8")
     new, n = re.subn(r"<!-- ACTIVITY:START -->.*?<!-- ACTIVITY:END -->", lambda _: block, readme, flags=re.S)
     if n != 1:
         sys.exit("README.md needs exactly one ACTIVITY:START/END block")
+    if "<!-- GUESTBOOK:START -->" in new:
+        new = re.sub(r"<!-- GUESTBOOK:START -->.*?<!-- GUESTBOOK:END -->", lambda _: guestbook_block(), new, flags=re.S)
     new = re.sub(r"badge/repos-\d+-", f"badge/repos-{profile['public_repos']}-", new)
     readme_path.write_text(new, encoding="utf-8", newline="\n")
     print(f"now: {[n for n, _ in now]} | {len(lines)} activity lines | status: {status}")

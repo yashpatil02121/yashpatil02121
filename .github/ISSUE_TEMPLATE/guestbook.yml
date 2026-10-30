@@ -1,0 +1,21 @@
+name: ✍️ Sign the guestbook
+description: Say hi! Your avatar shows up on my profile README.
+title: "✍️ Guestbook: "
+labels: ["guestbook"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for stopping by! 👋 Leave a short note. Your GitHub avatar appears in the guestbook on my profile (your message stays here).
+  - type: textarea
+    id: message
+    attributes:
+      label: Your message
+      placeholder: Hi Yash, loved the terminal animation…
+    validations:
+      required: true
+  - type: input
+    id: from
+    attributes:
+      label: Where are you from? (optional)
+      placeholder: Mumbai, India

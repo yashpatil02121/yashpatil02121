@@ -1,0 +1,12 @@
+{
+  "_comment": "Featured project cards, in display order. Public repos get live data (language, stars, last push); private ones are listed with the fields given here. Taglines come from taglines.json unless set here.",
+  "projects": [
+    {"name": "feature-planner"},
+    {"name": "search-auditor", "private": true, "language": "TypeScript", "color": "#3178c6",
+     "tagline": "E-commerce search-relevance harness: scrapes a store, builds queries, checks its own search finds them"},
+    {"name": "draftly", "live": "https://draftly-nwc5.onrender.com"},
+    {"name": "platepartners", "live": "https://platepartners.vercel.app/"},
+    {"name": "prathamesh-caters", "live": "https://prathamesh-caters.vercel.app"},
+    {"name": "artifact-validator"}
+  ]
+}
