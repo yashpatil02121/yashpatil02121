@@ -45,43 +45,180 @@ const yash = {
   currently:   "Building AI-powered dev tools & SaaS platforms",
   funFact:     "I turn complex challenges into clean solutions ✨",
 };
+```
 
+</td>
+<td width="45%">
 
+- 🔭 Working on **real-world full-stack & AI products**
+- 🤖 Building **developer tooling** with LLMs & Claude Code
+- 🌱 Diving deep into **Data Science & ML**
+- ⚡ Obsessed with **clean code & scalable design**
+- 🧩 Sharpening skills on **LeetCode & HackerRank**
+- 💬 Ask me about **React, Django, FastAPI, Python**
 
-### Step 2: snake animation workflow
+</td>
+</tr>
+</table>
 
-In the same repo, create the file `.github/workflows/snake.yml`:
+---
 
-```yaml
-name: Generate Snake
+<!-- ═══════════════════════ TECH STACK ═══════════════════════ -->
+## 🛠️ Tech Stack
 
-on:
-  schedule:
-    - cron: "0 */12 * * *"
-  workflow_dispatch:
-  push:
-    branches: [main]
+<h4 align="center">💻 Languages</h4>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=ts,js,python,java,c,html,css&perline=7" />
+</p>
 
-permissions:
-  contents: write
+<h4 align="center">🎨 Frontend</h4>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,nextjs,nuxtjs,vue,tailwind,vite&perline=6" />
+</p>
 
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - name: Generate snake SVGs
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#A855F7
+<h4 align="center">⚙️ Backend & Databases</h4>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=django,fastapi,nodejs,express,postgres,mysql,mongodb,elasticsearch&perline=8" />
+</p>
 
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+<h4 align="center">🧠 Data Science & AI</h4>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn&perline=3" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" height="40"/>
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" height="40"/>
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" height="40"/>
+</p>
+
+<h4 align="center">🧰 Tools & Platforms</h4>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=git,github,githubactions,docker,vercel,vscode,androidstudio,postman,linux&perline=9" />
+</p>
+
+---
+
+<!-- ═══════════════════════ FEATURED PROJECTS ═══════════════════════ -->
+## 🚀 Featured Projects
+
+<p align="center">
+  <a href="https://github.com/yashpatil02121/feature-planner">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=feature-planner&theme=tokyonight&hide_border=true&bg_color=0d1117" />
+  </a>
+  <a href="https://github.com/yashpatil02121/draftly">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=draftly&theme=tokyonight&hide_border=true&bg_color=0d1117" />
+  </a>
+  <a href="https://github.com/yashpatil02121/domsearch-frontend">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=domsearch-frontend&theme=tokyonight&hide_border=true&bg_color=0d1117" />
+  </a>
+  <a href="https://github.com/yashpatil02121/domsearch-backend">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=domsearch-backend&theme=tokyonight&hide_border=true&bg_color=0d1117" />
+  </a>
+  <a href="https://github.com/yashpatil02121/artifact-validator">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=artifact-validator&theme=tokyonight&hide_border=true&bg_color=0d1117" />
+  </a>
+  <a href="https://github.com/yashpatil02121/Blog-Generation-App-using-Llama-2-7B-Chat-GGML">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashpatil02121&repo=Blog-Generation-App-using-Llama-2-7B-Chat-GGML&theme=tokyonight&hide_border=true&bg_color=0d1117" />
+  </a>
+</p>
+
+<details>
+<summary><b>📂 More projects — click to expand</b></summary>
+<br/>
+
+| Project | Stack | Category |
+|---|---|---|
+| [🍽️ platepartners](https://github.com/yashpatil02121/platepartners) | TypeScript | Web App |
+| [🛠️ makerz_network_frontend](https://github.com/yashpatil02121/makerz_network_frontend) | TypeScript | Web Platform |
+| [🎙️ voismi-frontend](https://github.com/yashpatil02121/voismi-frontend) | TypeScript | Web App |
+| [📝 kulp-blogs](https://github.com/yashpatil02121/kulp-blogs) | TypeScript | Blog Platform |
+| [🍱 prathamesh-caters](https://github.com/yashpatil02121/prathamesh-caters) | TypeScript | Business Website |
+| [⚡ portfolio-fastapi](https://github.com/yashpatil02121/portfolio-fastapi) | Python · FastAPI | Backend |
+| [🔄 xmlToJson](https://github.com/yashpatil02121/xmlToJson-frontend) | JavaScript · Node | Dev Tool |
+| [🏷️ Tags2Braces](https://github.com/yashpatil02121/Tags2Braces) | Java | Dev Tool |
+| [🚌 Enhanced Routing for Educational Bus Networks](https://github.com/yashpatil02121/Enhanced-Routing-Efficiency-for-Educational-Bus-Networks) | Python · Web | B.E. Major Project |
+| [🛡️ Android Botnet Detection using ML](https://github.com/yashpatil02121/Android-Botnet-Detection-Using-Machine-Learning) | Python · ML | Security / ML |
+| [💧 Digital Water Marking](https://github.com/yashpatil02121/Digital-Water-Marking) | Python | Image Processing |
+| [🚗 Car Trade with Price Prediction](https://github.com/yashpatil02121/CAR-TRADE-WITH-PRICE-PREDICTION) | Jupyter · ML | Mini Project |
+| [📰 Text Summarization using NLP](https://github.com/yashpatil02121/Text-Summarization-using-NLP) | NLP | AI |
+| [🧮 DSA](https://github.com/yashpatil02121/DSA) | C | Algorithms |
+
+</details>
+
+---
+
+<!-- ═══════════════════════ STATS ═══════════════════════ -->
+## 📊 GitHub Analytics
+
+<p align="center">
+  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=yashpatil02121&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=A855F7&icon_color=A855F7"/>
+  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=yashpatil02121&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=A855F7"/>
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=yashpatil02121&theme=tokyonight&hide_border=true&background=0d1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7" alt="GitHub Streak"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yashpatil02121&bg_color=0d1117&color=A855F7&line=A855F7&point=ffffff&area=true&hide_border=true&custom_title=Contribution%20Activity" width="100%"/>
+</p>
+
+---
+
+<!-- ═══════════════════════ TROPHIES ═══════════════════════ -->
+## 🏆 GitHub Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=yashpatil02121&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=10&margin-h=10" alt="GitHub Trophies" />
+</p>
+
+---
+
+<!-- ═══════════════════════ SNAKE ═══════════════════════ -->
+<!-- Requires .github/workflows/snake.yml in this repo (Platane/snk) -->
+## 🐍 Watch the Snake Eat My Contributions
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yashpatil02121/yashpatil02121/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yashpatil02121/yashpatil02121/output/github-contribution-grid-snake.svg" />
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/yashpatil02121/yashpatil02121/output/github-contribution-grid-snake-dark.svg" />
+  </picture>
+</p>
+
+---
+
+<!-- ═══════════════════════ LEARNING ═══════════════════════ -->
+## 🧠 Currently Learning & Exploring
+
+```diff
++ 🤖 Advanced Machine Learning & LLM application development
++ 📈 Data Science — statistics, modeling & visualization
++ ⚙️ Algorithm optimization & efficient system design
++ 🔗 AI agents, developer tooling & automation workflows
++ 🏗️ Merging robust backend logic with delightful frontend UX
+```
+
+---
+
+<!-- ═══════════════════════ COLLAB ═══════════════════════ -->
+## 🤝 Let's Collaborate!
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Open+to+open-source+collaborations;Web+Dev+%E2%80%A2+Data+Science+%E2%80%A2+AI+%E2%80%A2+CP;Let's+build+something+impactful+together+%F0%9F%9A%80" />
+</p>
+
+<p align="center">
+  <i>I'm open to collaboration on open-source, data science, web development, or competitive programming projects. Feel free to reach out!</i>
+</p>
+
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random Dev Quote"/>
+</p>
+
+<p align="center">
+  ✨ <i>Fun fact: I'm passionate about turning complex challenges into efficient, clean solutions!</i>
+</p>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:A855F7,50:302b63,100:0f0c29&height=120&section=footer" width="100%"/>
+</p>
