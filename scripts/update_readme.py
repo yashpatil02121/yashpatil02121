@@ -68,8 +68,7 @@ def card_data(today):
         createdAt followers {{ totalCount }}
         repositories(ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false, first: 100,
                      orderBy: {{field: PUSHED_AT, direction: DESC}}) {{ totalCount nodes {{ {REPO_FIELDS} }} }}
-        year: contributionsCollection {{ contributionYears totalCommitContributions totalPullRequestContributions
-                                         contributionCalendar {{ totalContributions }} }}
+        year: contributionsCollection {{ contributionYears }}
         month: contributionsCollection(from: $since) {{
           commitContributionsByRepository(maxRepositories: 25) {{
             repository {{ name description isPrivate primaryLanguage {{ name color }} }} contributions {{ totalCount }} }} }}
@@ -78,7 +77,8 @@ def card_data(today):
     years = sorted(base["year"]["contributionYears"])
     aliases = " ".join(
         f'y{y}: contributionsCollection(from: "{y}-01-01T00:00:00Z", to: "{y}-12-31T23:59:59Z") '
-        "{ contributionCalendar { weeks { contributionDays { date contributionCount } } } }" for y in years)
+        "{ totalCommitContributions totalPullRequestContributions "
+        "contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } } }" for y in years)
     cal = gql(f"query($u: String!) {{ user(login: $u) {{ {aliases} }} }}", u=USER)["user"]
     by_year = {}
     for y in years:
@@ -86,7 +86,8 @@ def card_data(today):
                 for w in cal[f"y{y}"]["contributionCalendar"]["weeks"] for d in w["contributionDays"]]
         by_year[y] = sorted(d for d in days if d[0].year == y)
     all_days = sorted(d for days in by_year.values() for d in days if d[0] <= today)
-    last_year = [d for d in all_days if d[0] > today - timedelta(days=365)]
+    totals = {k: sum(cal[f"y{y}"][k] for y in years) for k in ("totalCommitContributions", "totalPullRequestContributions")}
+    totals["contributions"] = sum(cal[f"y{y}"]["contributionCalendar"]["totalContributions"] for y in years)
 
     repos = [r for r in base["repositories"]["nodes"] if not r["isPrivate"] and not r["isArchived"] and r["name"] != USER]
     by_name = {r["name"]: r for r in repos}
@@ -134,14 +135,14 @@ def card_data(today):
 
     return {
         "stats": {
-            "contributions": base["year"]["contributionCalendar"]["totalContributions"],
-            "commits": base["year"]["totalCommitContributions"],
-            "prs": base["year"]["totalPullRequestContributions"],
+            "contributions": totals["contributions"],
+            "commits": totals["totalCommitContributions"],
+            "prs": totals["totalPullRequestContributions"],
             "repos": base["repositories"]["totalCount"],
             "stars": sum(r["stargazerCount"] for r in repos),
             "followers": base["followers"]["totalCount"],
             "since": when(base["createdAt"]).year,
-            "days": last_year,
+            "days": all_days,
             "languages": [(n, s, c) for n, (s, c) in sorted(langs.items(), key=lambda kv: -kv[1][0])],
         },
         "years": by_year,

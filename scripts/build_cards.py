@@ -191,9 +191,9 @@ def stats_card(s, today):
     w, h = 860, 290
     current, longest, _ = streaks(s["days"])
     tiles = [
-        ("Contributions", s["contributions"], "last 12 months", PURPLE),
-        ("Commits", s["commits"], "last 12 months", PINK),
-        ("Pull requests", s["prs"], "last 12 months", CYAN),
+        ("Contributions", s["contributions"], f"all time · since {s['since']}", PURPLE),
+        ("Commits", s["commits"], "all time", PINK),
+        ("Pull requests", s["prs"], "all time", CYAN),
         ("Own repos", s["repos"], f"public · since {s['since']}", GREEN),
         ("Stars earned", s["stars"], "across my repos", YELLOW),
         ("Followers", s["followers"], "and counting", "#58A6FF"),
@@ -224,7 +224,7 @@ def stats_card(s, today):
         f'<text x="{cx}" y="{cy + 4}" fill="{TEXT}" font-size="34" font-weight="800" text-anchor="middle">{current}</text>'
         f'<text x="{cx}" y="{cy + 24}" fill="{MUTED}" font-size="11" text-anchor="middle">day streak</text>'
         f'<text x="{cx}" y="{cy - r - 20}" fill="{PINK}" font-size="12" font-weight="700" text-anchor="middle">🔥 current streak</text>'
-        f'<text x="{cx}" y="{cy + r + 30}" fill="{MUTED}" font-size="12" text-anchor="middle">longest: '
+        f'<text x="{cx}" y="{cy + r + 30}" fill="{MUTED}" font-size="12" text-anchor="middle">longest ever: '
         f'<tspan fill="{TEXT}" font-weight="700">{longest} days</tspan></text></g>'
     )
     # languages
