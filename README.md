@@ -139,6 +139,11 @@
 
 <!-- ACTIVITY:END -->
 
+<!-- Work account: counts from its public contribution calendar only (scripts/update_readme.py work_data) -->
+<p align="center">
+  <a href="https://github.com/yashsmartercodes"><img src="./assets/stats/work.svg" width="100%" alt="Work activity at Smarter Codes: contribution counts from private client repos, with a last-30-days chart. No project names or code."/></a>
+</p>
+
 <p align="center">
   <img src="./assets/stats/releases.svg" width="100%" alt="Latest releases across my public repos"/>
 </p>

@@ -379,6 +379,71 @@ def releases_card(rels, today):
     write("stats/releases.svg", w, h, "".join(body), "".join(css))
 
 
+def work_card(wk, today):
+    """wk: dict handle, company, contributions, private, days [(date, count)], since (date).
+
+    Only calendar counts: no repo, org or commit details ever reach this card.
+    """
+    w, h = 860, 300
+    days = [d for d in wk["days"] if d[0] <= today]
+    current, longest, _ = streaks(days)
+    active = sum(1 for _, c in days if c > 0)
+    body = [frame(w, h, f"Work @ {wk['company']}", f"github.com/{wk['handle']}")]
+    css = [FADE_UP, "@keyframes rise{from{transform:scaleY(0)}}"
+           ".bar{transform-box:fill-box;transform-origin:bottom;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}"]
+    tiles = [
+        ("Contributions", wk["contributions"], f"since {wk['since']:%b %Y}", PURPLE),
+        ("In private repos", wk["private"], "counts only", PINK),
+        ("Active days", active, f"of {len(days)}", CYAN),
+        ("Current streak", current, f"longest {longest}d", GREEN),
+    ]
+    for i, (label, val, sub, col) in enumerate(tiles):
+        x, y = 24 + (i % 2) * 132, 62 + (i // 2) * 100
+        body.append(
+            f'<g class="up" style="animation-delay:{.08 * i:.2f}s">'
+            f'<rect x="{x}" y="{y}" width="120" height="88" rx="10" fill="{PANEL}" stroke="{BORDER}"/>'
+            f'<rect x="{x}" y="{y + 14}" width="3" height="20" rx="1.5" fill="{col}"/>'
+            f'<text x="{x + 14}" y="{y + 29}" fill="{MUTED}" font-size="11.5">{esc(label)}</text>'
+            f'<text x="{x + 14}" y="{y + 60}" fill="{TEXT}" font-size="26" font-weight="800">{val:,}</text>'
+            f'<text x="{x + 14}" y="{y + 77}" fill="{MUTED}" font-size="10" font-family="{MONO}">{esc(sub)}</text></g>'
+        )
+
+    # daily bars, last 30 days
+    last = days[-30:]
+    cx0, cw, base, ch = 300, 536, 238, 150
+    top = max((c for _, c in last), default=0) or 1
+    step = cw / max(len(last), 1)
+    bw = step * .72
+    body.append(f'<text x="{cx0}" y="72" fill="{TEXT}" font-size="13" font-weight="700">Last 30 days</text>')
+    busiest = max(last, key=lambda dc: dc[1]) if last else None
+    if busiest and busiest[1]:
+        body.append(f'<text x="{cx0 + cw}" y="72" fill="{MUTED}" font-size="11.5" text-anchor="end">'
+                    f'busiest: {busiest[0]:%d %b} · {busiest[1]} contributions</text>')
+    for k in (.5, 1):
+        gy = base - ch * k
+        body.append(f'<line x1="{cx0}" y1="{gy:.1f}" x2="{cx0 + cw}" y2="{gy:.1f}" stroke="{BORDER}" stroke-dasharray="3 4"/>'
+                    f'<text x="{cx0 - 6}" y="{gy + 4:.1f}" fill="{MUTED}" font-size="9.5" text-anchor="end">{round(top * k)}</text>')
+    body.append(f'<line x1="{cx0}" y1="{base}" x2="{cx0 + cw}" y2="{base}" stroke="{BORDER}"/>')
+    for i, (d, c) in enumerate(last):
+        x = cx0 + i * step + (step - bw) / 2
+        bh = ch * c / top
+        fill = "url(#barg)" if c else BORDER
+        body.append(
+            f'<rect class="bar" style="animation-delay:{.3 + i * .025:.3f}s" x="{x:.1f}" y="{base - max(bh, 2):.1f}" '
+            f'width="{bw:.1f}" height="{max(bh, 2):.1f}" rx="2" fill="{fill}"><title>{d:%d %b}: {c}</title></rect>'
+        )
+    if last:
+        body.append(f'<text x="{cx0}" y="{base + 16}" fill="{MUTED}" font-size="10">{last[0][0]:%d %b}</text>'
+                    f'<text x="{cx0 + cw}" y="{base + 16}" fill="{MUTED}" font-size="10" text-anchor="end">today</text>')
+    body.append(
+        f'<text x="24" y="{h - 18}" fill="{MUTED}" font-size="11.5">🔒 Client work lives in private repos. '
+        f'This card only counts calendar squares: no project names, code or commit messages.</text>'
+    )
+    defs = (f'<linearGradient id="barg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="{VIOLET}"/>'
+            f'<stop offset="1" stop-color="{PINK}"/></linearGradient>')
+    write("stats/work.svg", w, h, "".join(body), "".join(css), defs)
+
+
 def project_card(p, today):
     """p: dict name, tagline, language, color, stars, pushed (date|None), live (bool), private (bool)."""
     w, h = 425, 158
@@ -431,6 +496,8 @@ def build_all(data, today):
     releases_card(data["releases"], today)
     for p in data["projects"]:
         project_card(p, today)
+    if data.get("work"):
+        work_card(data["work"], today)
 
 
 if __name__ == "__main__":

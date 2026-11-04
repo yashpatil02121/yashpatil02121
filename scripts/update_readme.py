@@ -25,6 +25,9 @@ import build_cards  # noqa: E402
 import gen_svgs  # noqa: E402
 
 USER = os.environ.get("GITHUB_USER", "yashpatil02121")
+# Work account: only its public contribution calendar is read (private work shows there as bare counts).
+WORK_USER = os.environ.get("WORK_GITHUB_USER", "yashsmartercodes")
+WORK_COMPANY = "Smarter Codes"
 TOKEN = os.environ.get("GITHUB_TOKEN")
 IST = timezone(timedelta(hours=5, minutes=30))
 MAX_ACTIVITY = 6
@@ -149,6 +152,32 @@ def card_data(today):
         "focus": focus,
         "releases": releases,
         "projects": projects,
+        "work": work_data() if WORK_USER else None,
+    }
+
+
+def work_data():
+    """Counts from the work account's public calendar. Never repo, org or commit details."""
+    try:
+        meta = gql("query($u: String!) { user(login: $u) { createdAt contributionsCollection { contributionYears } } }",
+                   u=WORK_USER)["user"]
+        years = sorted(meta["contributionsCollection"]["contributionYears"])
+        aliases = " ".join(
+            f'y{y}: contributionsCollection(from: "{y}-01-01T00:00:00Z", to: "{y}-12-31T23:59:59Z") '
+            "{ restrictedContributionsCount contributionCalendar { totalContributions "
+            "weeks { contributionDays { date contributionCount } } } }" for y in years)
+        cal = gql(f"query($u: String!) {{ user(login: $u) {{ {aliases} }} }}", u=WORK_USER)["user"]
+    except Exception as e:
+        print(f"work card skipped: {e}")
+        return None
+    since = when(meta["createdAt"]).date()
+    days = sorted((datetime.strptime(d["date"], "%Y-%m-%d").date(), d["contributionCount"])
+                  for y in years for w in cal[f"y{y}"]["contributionCalendar"]["weeks"] for d in w["contributionDays"])
+    return {
+        "handle": WORK_USER, "company": WORK_COMPANY, "since": since,
+        "contributions": sum(cal[f"y{y}"]["contributionCalendar"]["totalContributions"] for y in years),
+        "private": sum(cal[f"y{y}"]["restrictedContributionsCount"] for y in years),
+        "days": [d for d in days if d[0] >= since],
     }
 
 
