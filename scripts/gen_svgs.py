@@ -417,7 +417,7 @@ def hero():
         # availability pill
         f'<g class="u1"><rect x="{W/2 - 112}" y="36" width="224" height="30" rx="15" fill="{GREEN}" fill-opacity=".1" stroke="{GREEN}" stroke-opacity=".5"/>'
         f'<circle class="ping" cx="{W/2 - 90}" cy="51" r="5" fill="{GREEN}"/><circle cx="{W/2 - 90}" cy="51" r="4.5" fill="{GREEN}"/>'
-        f'<text x="{W/2 + 8}" y="56" text-anchor="middle" font-family="{SANS}" font-size="13.5" font-weight="600" fill="{GREEN}">Available for collaboration</text></g>'
+        # f'<text x="{W/2 + 8}" y="56" text-anchor="middle" font-family="{SANS}" font-size="13.5" font-weight="600" fill="{GREEN}">Available for collaboration</text></g>'
         # name
         f'<g class="u2"><text x="{W/2}" y="142" text-anchor="middle" font-family="{SANS}" font-size="78" font-weight="800" letter-spacing="2" fill="url(#name)">YASH<tspan fill="{TEXT}">.</tspan>DEV</text></g>'
         f'<g class="u3"><text x="{W/2}" y="180" text-anchor="middle" font-family="{MONO}" font-size="14" letter-spacing="6" fill="{PURPLE}">FULL STACK  +  AI</text></g>'
