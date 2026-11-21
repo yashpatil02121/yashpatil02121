@@ -120,8 +120,6 @@
 <sub><code>Oct 27</code></sub> &nbsp;🚀 Released <a href="https://github.com/yashpatil02121/feature-planner/releases/tag/v1.1.0">v1.1.0</a> of <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a><br/>
 <sub><code>Oct 26</code></sub> &nbsp;🚀 Released <a href="https://github.com/yashpatil02121/feature-planner/releases/tag/v1.0.0">v1.0.0</a> of <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a><br/>
 <sub><code>Oct 26</code></sub> &nbsp;📦 Pushed to <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a> — <code>Release 1.0.0: bump version, finalize changelog, fix install docs</code><br/>
-<sub><code>Oct 22</code></sub> &nbsp;📦 Pushed to <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a> — <code>Size plans to the feature and add baseline comparison results</code><br/>
-<sub><code>Oct 22</code></sub> &nbsp;🚀 Released <a href="https://github.com/yashpatil02121/feature-planner/releases/tag/v0.3.0">v0.3.0</a> of <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a><br/>
 </td>
 <td width="38%" valign="top">
 <b>🔥 Most recently pushed</b>
