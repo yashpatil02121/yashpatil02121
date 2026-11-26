@@ -116,7 +116,7 @@
 <tr>
 <td width="62%" valign="top">
 <b>⚡ Recent activity</b><br/><br/>
-<sub><code>Oct 27</code></sub> &nbsp;📦 Pushed to <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a> — <code>Document /fp as the everyday command</code><br/>
+<sub><code>Oct 27</code></sub> &nbsp;📦 Pushed to <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a> — <code>Release 1.1.0</code><br/>
 </td>
 <td width="38%" valign="top">
 <b>🔥 Most recently pushed</b>
@@ -130,7 +130,7 @@
 </tr>
 </table>
 
-<p align="right"><sub>🤖 auto-refreshed 26 Nov 2026 by <a href="scripts/update_readme.py">update_readme.py</a></sub></p>
+<p align="right"><sub>🤖 auto-refreshed 27 Nov 2026 by <a href="scripts/update_readme.py">update_readme.py</a></sub></p>
 
 <!-- ACTIVITY:END -->
 
