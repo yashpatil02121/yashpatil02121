@@ -117,9 +117,6 @@
 <td width="62%" valign="top">
 <b>⚡ Recent activity</b><br/><br/>
 <sub><code>Oct 27</code></sub> &nbsp;📦 Pushed to <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a> — <code>Document /fp as the everyday command</code><br/>
-<sub><code>Oct 27</code></sub> &nbsp;🚀 Released <a href="https://github.com/yashpatil02121/feature-planner/releases/tag/v1.1.0">v1.1.0</a> of <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a><br/>
-<sub><code>Oct 26</code></sub> &nbsp;🚀 Released <a href="https://github.com/yashpatil02121/feature-planner/releases/tag/v1.0.0">v1.0.0</a> of <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a><br/>
-<sub><code>Oct 26</code></sub> &nbsp;📦 Pushed to <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a> — <code>Release 1.0.0: bump version, finalize changelog, fix install docs</code><br/>
 </td>
 <td width="38%" valign="top">
 <b>🔥 Most recently pushed</b>
