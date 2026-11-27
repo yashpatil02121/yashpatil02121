@@ -116,7 +116,7 @@
 <tr>
 <td width="62%" valign="top">
 <b>⚡ Recent activity</b><br/><br/>
-<sub><code>Oct 27</code></sub> &nbsp;📦 Pushed to <a href="https://github.com/yashpatil02121/feature-planner">feature-planner</a> — <code>Release 1.1.0</code><br/>
+<sub>Quiet week — probably deep in a private repo. 🤫</sub><br/>
 </td>
 <td width="38%" valign="top">
 <b>🔥 Most recently pushed</b>
